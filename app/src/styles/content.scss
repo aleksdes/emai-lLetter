@@ -1,0 +1,18 @@
+// Картинка-ссылка
+.image-box {
+  margin: 1em 0;
+  text-align: center;
+  a {
+    text-decoration: none;
+    border-bottom: none;
+  }
+}
+
+code {
+  background-color: $bg-color;
+  border-radius: 4px;
+  color: #999999;
+  font-family: 'Consolas', 'Courier New', Courier, sans-serif;
+  font-weight: normal;
+  padding: 3px 6px 1px 6px;
+}

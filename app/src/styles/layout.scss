@@ -1,0 +1,111 @@
+
+.webkit {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  table-layout: fixed;
+  text-align: center;
+  width: 100%;
+  background-color: $bg-color;
+}
+
+.layout {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.main {
+  background-color: $bg-color;
+  font-size: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.wrapper {
+  margin: 0 auto;
+  margin-top: 15px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  max-width: 600px;
+  width: 100%;
+  background-color: $card-color;
+  border-radius: 6px;
+  box-shadow: #13131328 0 8px 25px;
+}
+
+.email {
+  padding: 24px;
+}
+
+.preheader {
+  padding: 0;
+
+  & > p {
+    color: $color;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+  }
+}
+
+header {
+  .header-content {
+    padding: 0;
+  }
+}
+
+.content {
+  font-size: 0;
+  padding: 0;
+  text-align: center;
+  padding: 0 16px;
+
+  &__element-style {
+    display: block;
+    margin: 30px 0;
+  }
+
+  &__box-text{ 
+    & > p {
+      font-size: 14px;
+    }
+  }
+}
+
+.column {
+  display: inline-block;
+  max-width: 600px;
+  vertical-align: top;
+  width: 100%;
+
+  &__header {
+    margin-bottom: 50px;
+  }
+}
+
+.cell {
+  font-size: 16px;
+  padding: 0;
+  text-align: left;
+}
+
+.footer {
+  font-size: 0;
+  padding: 83px 0 20px 0;
+  text-align: center;
+
+  &__description {
+    margin-top: 20px;
+    color: $color;
+    max-width: 340px;
+    width: 100%;
+    font-size: 0.75rem;
+    line-height: 20px;
+    text-align: center;
+
+    & a {
+      color: $basic-accent !important;
+      border-bottom: lighten($basic-accent, 25%) 1px solid;
+      text-decoration: none;
+    }
+  }
+}

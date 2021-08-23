@@ -1,0 +1,86 @@
+{% import "./parts/globals.html" as glob %}
+{% from "./utils/mso.html"        import msoBegin, msoEnd %}
+{% from "./utils/button.html"     import button %}
+{% from "./utils/image.html"      import image %}
+
+<!DOCTYPE HTML PUBLIC «-//W3C//DTD HTML 4.0 Transitional//EN»>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:v="urn:schemas-microsoft-com:vml"
+    xmlns:o="urn:schemas-microsoft-com:office:office"
+    lang="en"
+    xml:lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--[if mso | IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <meta name="x-apple-disable-message-reformatting">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
+
+    {% if not(disable_mobile) %}<meta name="viewport" content="width=device-width, initial-scale=1.0">{% endif %}
+
+    <title>{{ subject }}</title>
+    <style type="text/css"> {% include "./styles/default.css" ignore missing %} </style>
+    {% include "./styles/style.html" ignore missing %}
+
+    <!--[if gte mso 9]><xml>
+      <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml><![endif]-->
+  </head>
+  <body class="body" 
+    style="margin: 0; padding: 0; min-width: 300px; background-color: #EEF2F7; height:100% !important; width:100% !important;"
+  >
+    <div class="webkit" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; table-layout: fixed; text-align: center; width: 100%; background-color: #EEF2F7;">
+      {% if preheader %}
+        <p class="preheader" style="padding: 0;">{{ preheader }}</p>
+      {% endif %}
+
+      <table class="layout" style="border-collapse: collapse; border-spacing: 0; border: 0px; "
+        align="center"
+        {% if subject %}aria-label="{{ subject }}"{% endif %}
+        border="0"
+        cellpadding="0"
+        cellspacing="0"
+        role="article"
+        width="100%">
+        <tr>
+          <td class="main" align="center" style="background-color:#EEF2F7; font-size: 0; spadding: 0; text-align: center;">
+            {{ msoBegin(width) }}
+            <table class="wrapper"
+              style="margin: 0 auto;
+              margin-top: 15px; border-collapse: collapse;
+              border-spacing: 0; max-width: 600px;
+              width: 100%; background-color: #ffffff;
+              border-radius: 6px; box-shadow: 0 8px 25px #13131328;"
+              align="center"
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              role="presentation"
+              width="100%">
+              <tr>
+                <td class="email" style="padding: 24px;">
+                  <table class="email__wrapper f-fallback"
+                    align="center"
+                    border="0"
+                    cellpadding="0"
+                    cellspacing="0"
+                    role="presentation"
+                    width="100%">
+                    {% include "components/header.html" ignore missing %}
+                    {% include "components/emailTypeLetter/system.html" ignore missing %}
+                    {% include "components/footer.html" ignore missing %}
+                  </table>
+                </td><!-- /.content -->
+              </tr>
+            </table>
+            {{ msoEnd() }}
+          </td>
+        </tr>
+      </table>
+    </div><!-- /.webkit -->
+  </body>
+</html>

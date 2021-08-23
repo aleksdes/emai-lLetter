@@ -1,0 +1,26 @@
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: none;
+  font-family: $font-family;
+  border-radius: 4px;
+  padding: 12px 30px;
+  line-height: $font-size;
+  line-height: 26px;
+  min-width: 60px;
+  text-align: center;
+  
+  & > span {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  &__box {
+    border-radius: 4px;
+  }
+
+  &__wrap {
+    margin: 0 0 1em 0;
+  }
+}
